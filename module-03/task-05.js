@@ -22,11 +22,11 @@ const products = [{
     }
 ];
 
-const getAllPropValues = (products, key) => {
+const getAllPropValues = (arr, prop) => {
     const propValues = [];
-    for (const obj of products) {
-        if (obj.hasOwnProperty(key)) {
-            propValues.push(obj[key]);
+    for (const obj of arr) {
+        if (prop in obj) {
+            propValues.push(obj[prop])
         }
     }
     return propValues;
