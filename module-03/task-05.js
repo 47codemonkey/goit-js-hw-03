@@ -25,6 +25,7 @@ const products = [{
 const getAllPropValues = (arr, prop) => {
     const propValues = [];
     for (const obj of arr) {
+        //if(obj[prop])
         if (prop in obj) {
             propValues.push(obj[prop])
         }
